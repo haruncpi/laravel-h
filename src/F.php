@@ -35,7 +35,7 @@ class F
 
         if (!is_null($old) && $name !== '_method') {
             return $old;
-        }else{
+        } else {
             return $value;
         }
     }
