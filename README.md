@@ -9,6 +9,12 @@
 </p>
 <p align="center">A helper package for Laravel Framework.</p>
 
+### Installation
+```
+composer require haruncpi/laravel-h
+```
+
+
 ### Helpers
 You can use all helper class method by `H::method()` or `h()->method()`
 <table>
