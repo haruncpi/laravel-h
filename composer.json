@@ -1,6 +1,6 @@
 {
     "name": "haruncpi/laravel-h",
-    "description": "A package for Laravel Helper",
+    "description": "A helper package for Laravel Framework",
     "license": "cc-by-4.0",
     "authors": [
         {
@@ -16,7 +16,10 @@
     "autoload": {
         "psr-4": {
             "Haruncpi\\LaravelH\\": "src/"
-        }
+        },
+        "files": [
+            "src/helpers.php"
+        ]
     },
     "extra": {
         "laravel": {
