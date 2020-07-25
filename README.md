@@ -121,7 +121,7 @@ F::label('name')
 //output <label for="name">Name</label>
 ```
 
-`text($name,$attr)` - Form text box.
+`text($name, $value = null, $attr = [])` - Form text box.
 ```php
 F::text('first_name')
 //output <input type="text" name="first_name"/>
@@ -130,26 +130,45 @@ F::text('first_name', $data->name, ['class'=>'form-control'] )
 //output <input type="text" name="first_name" value="Jhon Doe" class="form-control"/>
 ```
 
-`email($name,$attr)` - Form email type input box.
+`email($name, $value = null, $attr = [])` - Form email type input box.
 ```php
 F::email('user_email')
 //output <input type="email" name="user_email"/>
 ```
 
-`number($name,$attr)` - Form number type input box.
+`password($name, $value = null, $attr = [])` - Form password type input box.
+```php
+F::password('password')
+//output <input type="password" name="password"/>
+```
+
+`number($name, $value = null, $attr = [])` - Form number type input box.
 ```php
 F::number('roll')
 //output <input type="number" name="roll"/>
 ```
 
-`hidden($name,$attr)` - Form hidden input box.
+`hidden($name, $value = null, $attr = [])` - Form hidden input box.
 ```php
 F::number('user_type')
 //output <input type="hidden" name="user_type"/>
 ```
 
+`textarea($name, $value = null, $attr = [])` - Form textarea.
+```php
+F::textarea('description')
+//output <textarea name="description"></textarea>
+```
+
 `select($name,$list,$selected,$attr)` - Form select box.
 ```php
-$list = [1=>'Jhon',2=>'Adam'];
+$list = [1 => 'Jhon', 2 => 'Adam'];
 F::select('user_id',$list,null);
+
+/** output 
+<select name="user_id">
+    <option value="1">Jhon</option>
+    <option value="2">Adam</option>
+</select>
+*/
 ```
