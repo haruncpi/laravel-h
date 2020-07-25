@@ -14,15 +14,15 @@ You can use all helper class method by `H::method()` or `h()->method()`
 <table>
 <tr>
 <td>
-H::isLoggedIn()
 
-H::numToWord(12.23)
+`H::isLoggedIn()` <br> 
+`H::numToWord(12.23)`
 </td>
 
 <td>
-h()->isLoggedIn()
 
-h()->numToWord(12.23)
+`h()->isLoggedIn()` <br> `h()->numToWord(12.23)`
+
 </td>
 </tr>
 </table>
@@ -86,15 +86,14 @@ You can use all form helper method by `F::method()` or `f()->method()`
 <table>
 <tr>
 <td>
-F::text('name')
 
-F::number('roll')
+`F::text('name')`<br>`F::number('roll')`
+
 </td>
-
 <td>
-f()->text('name')
 
-f()->number('roll')
+`f()->text('name')`<br>`f()->number('roll')`
+
 </td>
 </tr>
 </table>
@@ -117,20 +116,40 @@ F::close()
 ```
 
 `label($name)` - Input label.
-```
+```php
 F::label('name')
 //output <label for="name">Name</label>
 ```
 
 `text($name,$attr)` - Form text box.
-```
+```php
 F::text('first_name')
-
-//output 
-<input type="text" name="first_name"/>
+//output <input type="text" name="first_name"/>
 
 F::text('first_name', $data->name, ['class'=>'form-control'] )
+//output <input type="text" name="first_name" value="Jhon Doe" class="form-control"/>
+```
 
-//output 
-<input type="text" name="first_name" value="Jhon Doe" class="form-control"/>
+`email($name,$attr)` - Form email type input box.
+```php
+F::email('user_email')
+//output <input type="email" name="user_email"/>
+```
+
+`number($name,$attr)` - Form number type input box.
+```php
+F::number('roll')
+//output <input type="number" name="roll"/>
+```
+
+`hidden($name,$attr)` - Form hidden input box.
+```php
+F::number('user_type')
+//output <input type="hidden" name="user_type"/>
+```
+
+`select($name,$list,$selected,$attr)` - Form select box.
+```php
+$list = [1=>'Jhon',2=>'Adam'];
+F::select('user_id',$list,null);
 ```
