@@ -100,17 +100,17 @@ You can use all form helper method by `F::method()` or `f()->method()`
 
 
 `open($options)` - Open form tag.
-```
+```php
 F::open(['url'=>'submit'])
 
-//output 
+/** output 
 <form action="example.com/submit" method="POST">
 <input type="hidden" name="_token" value="FwrnW3SOkLHKHsJctWnCeyZrOFtW6UtSHRf5XGrv"/>
+*/
 ```
-
 
 `close()` - Close form tag.
-```
+```php
 F::close()
 //output </form>
 ```
