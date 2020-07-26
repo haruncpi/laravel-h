@@ -9,7 +9,9 @@
 </p>
 <p align="center">A helper package for Laravel Framework.</p>
 
-![Image description](preview.png)
+<p align="center">
+<img width="640" height="320" src="preview.png"/>
+</p>
 
 ## Documentation
 Get full documentation of [Laravel H](https://laravelarticle.com/laravel-h)
