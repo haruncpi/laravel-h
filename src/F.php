@@ -1,9 +1,6 @@
-<?php
-
-namespace Haruncpi\LaravelH;
+<?php namespace Haruncpi\LaravelH;
 
 use DateTime;
-
 
 class F
 {
@@ -143,6 +140,7 @@ class F
 
         if (in_array($method, ['DELETE', 'PATCH', 'PUT'])) {
             $append .= $this->hidden('_method', $method);
+            $attr['method'] = 'POST';
         }
 
         return "<form " . $this->makeAttr($attr) . ">" . $append;
@@ -164,6 +162,16 @@ class F
     public function submit($value = null, $attr = [])
     {
         return $this->makeInput('submit', null, $value, $attr);
+    }
+
+    /**
+     * @param null $label
+     * @param array $attr
+     * @return string
+     */
+    public function button($label = null, $attr = [])
+    {
+        return "<button " . $this->makeAttr($attr) . ">" . $label . "</button>";
     }
 
     /**
