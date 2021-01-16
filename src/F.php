@@ -143,6 +143,13 @@ class F
             $attr['method'] = 'POST';
         }
 
+        if (array_key_exists('id', $options)) {
+            $attr['id'] = $options['id'];
+        }
+        if (array_key_exists('class', $options)) {
+            $attr['class'] = $options['class'];
+        }
+
         return "<form " . $this->makeAttr($attr) . ">" . $append;
     }
 
